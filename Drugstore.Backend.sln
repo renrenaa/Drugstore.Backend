@@ -7,6 +7,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{611F4037-1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drugstore.Domain", "Drugstore.Domain\Drugstore.Domain.csproj", "{A6C4F862-127E-451E-8E9A-96C67D397797}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drugstore.Application", "Drugstore.Application\Drugstore.Application.csproj", "{3F80FC8A-38DC-4541-81DD-57B5DC37808D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{F7CBAE74-1C04-4CBA-A8DC-BB93E47D3984}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{794A08DF-41C6-4683-8FAE-DC06A6411B42}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8D4F3226-15E6-43C5-87A8-C21965434C57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistance", "Persistance\Persistance.csproj", "{EE296EE0-F18E-4B89-B88F-0D53386531B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +27,22 @@ Global
 		{A6C4F862-127E-451E-8E9A-96C67D397797}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6C4F862-127E-451E-8E9A-96C67D397797}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6C4F862-127E-451E-8E9A-96C67D397797}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F80FC8A-38DC-4541-81DD-57B5DC37808D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F80FC8A-38DC-4541-81DD-57B5DC37808D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F80FC8A-38DC-4541-81DD-57B5DC37808D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F80FC8A-38DC-4541-81DD-57B5DC37808D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE296EE0-F18E-4B89-B88F-0D53386531B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE296EE0-F18E-4B89-B88F-0D53386531B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE296EE0-F18E-4B89-B88F-0D53386531B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE296EE0-F18E-4B89-B88F-0D53386531B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A6C4F862-127E-451E-8E9A-96C67D397797} = {611F4037-18DE-44C4-9EF0-F81BA35FFE16}
+		{3F80FC8A-38DC-4541-81DD-57B5DC37808D} = {611F4037-18DE-44C4-9EF0-F81BA35FFE16}
+		{EE296EE0-F18E-4B89-B88F-0D53386531B3} = {F7CBAE74-1C04-4CBA-A8DC-BB93E47D3984}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EF0CE234-2053-467F-9E90-DF4D7C763AD3}
