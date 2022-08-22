@@ -13,11 +13,7 @@ namespace Drugstore.Application.Drugs.Commands.UpdateCommand
 
         public UpdateDrugCommandHandler(IDrugstoreDbContext context)
         {
-            if (_dbContext == null)
-            {
-                throw new ArgumentNullException(nameof(context));
-            }
-            _dbContext = context;
+            _dbContext = context ?? throw new ArgumentNullException(nameof(context));
         }
         public async Task<Unit> Handle(UpdateDrugCommand request, 
             CancellationToken cancellationToken)
@@ -31,6 +27,7 @@ namespace Drugstore.Application.Drugs.Commands.UpdateCommand
                 throw new NotFoundExteption(nameof(Drug), request.Id);
             }
 
+            drug.Price = request.Price;
             drug.Tittle = request.Tittle;
             drug.Quantity = request.Quantity;
             drug.Description = request.Description;

@@ -12,11 +12,7 @@ namespace Drugstore.Application.Drugs.Commands.DeleteDrug
 
         public DeleteDrugCommandHandler(IDrugstoreDbContext context)
         {
-            if (_dbContext == null)
-            {
-                throw new ArgumentNullException(nameof(context));
-            }
-            _dbContext = context;
+            _dbContext = context ?? throw new ArgumentNullException(nameof(context));
         }
         public async Task<Unit> Handle(DeleteDrugCommand request,
             CancellationToken cancellationToken)

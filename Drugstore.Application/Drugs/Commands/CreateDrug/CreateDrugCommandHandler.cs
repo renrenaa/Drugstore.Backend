@@ -11,11 +11,7 @@ namespace Drugstore.Application.Drugs.Commands.CreateDrug
 
         public CreateDrugCommandHandler(IDrugstoreDbContext context)
         {
-            if(_dbContext == null)
-            {
-                throw new ArgumentNullException(nameof(context));
-            }
-            _dbContext = context;
+            _dbContext = context ?? throw new ArgumentNullException(nameof(context));
         }
 
         public async Task<Guid> Handle(CreateDrugCommand request, 
@@ -24,6 +20,7 @@ namespace Drugstore.Application.Drugs.Commands.CreateDrug
             var drug = new Drug
             {
                 Id = request.Id,
+                Price = request.Price,
                 Tittle = request.Tittle,
                 Quantity = request.Quantity,
                 Description = request.Description,
