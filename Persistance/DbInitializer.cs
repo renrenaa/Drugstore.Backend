@@ -1,10 +1,8 @@
 ﻿namespace Persistance
 {
-    public class DbInitializer
+    public static class DbInitializer
     {
-        public DbInitializer(DrugstoreDbContext context)
-        {
-            context.Database.EnsureCreated();
-        }
+        public static void Initialize(DrugstoreDbContext context)
+            => context.Database.EnsureCreated();
     }
 }
