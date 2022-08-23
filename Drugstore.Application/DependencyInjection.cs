@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using Drugstore.Application.Common.Behaviors;
+using FluentValidation;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -8,7 +10,12 @@ namespace Drugstore.Application
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-            return services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddMediatR(Assembly.GetExecutingAssembly());
+            services
+                .AddValidatorsFromAssemblies(new[] { Assembly.GetExecutingAssembly() });
+            services.AddTransient(typeof(IPipelineBehavior<,>), 
+                typeof(ValidationBehavior<,>));
+            return services;
         }
     }
 }
