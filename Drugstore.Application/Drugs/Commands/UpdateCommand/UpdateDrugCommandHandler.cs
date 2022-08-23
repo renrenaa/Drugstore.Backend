@@ -4,7 +4,7 @@ using Drugstore.Domain;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace Drugstore.Application.Drugs.Commands.UpdateDrug
+namespace Drugstore.Application.Drugs.Commands.UpdateCommand
 {
     public class UpdateDrugCommandHandler :
         IRequestHandler<UpdateDrugCommand>

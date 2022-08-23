@@ -1,4 +1,4 @@
-﻿using Drugstore.Application.Drugs.Commands.UpdateDrug;
+﻿using Drugstore.Application.Drugs.Commands.UpdateCommand;
 using Drugstore.Application.Mapping;
 
 namespace Drugsrore.WebApi.Models

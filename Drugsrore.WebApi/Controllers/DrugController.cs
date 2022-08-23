@@ -2,7 +2,7 @@
 using Drugsrore.WebApi.Models;
 using Drugstore.Application.Drugs.Commands.CreateDrug;
 using Drugstore.Application.Drugs.Commands.DeleteDrug;
-using Drugstore.Application.Drugs.Commands.UpdateDrug;
+using Drugstore.Application.Drugs.Commands.UpdateCommand;
 using Drugstore.Application.Drugs.Queries.GetDrug;
 using Drugstore.Application.Drugs.Queries.GetDrugList;
 using Microsoft.AspNetCore.Mvc;
