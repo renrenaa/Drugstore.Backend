@@ -1,4 +1,4 @@
-﻿using Drugstore.Application.Common.Exteptions;
+﻿using Drugstore.Application.Common.Exceptions;
 using Drugstore.Application.Interfaces;
 using Drugstore.Domain;
 using MediatR;
@@ -24,7 +24,7 @@ namespace Drugstore.Application.Drugs.Commands.UpdateDrug
 
             if (drug == null || drug.Id != request.Id)
             {
-                throw new NotFoundExteption(nameof(Drug), request.Id);
+                throw new NotFoundExcepcion(nameof(Drug), request.Id);
             }
 
             drug.Price = request.Price;

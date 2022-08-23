@@ -1,3 +1,4 @@
+using Drugsrore.WebApi.Middleware;
 using Drugstore.Application;
 using Drugstore.Application.Interfaces;
 using Drugstore.Application.Mapping;
@@ -43,6 +44,7 @@ using(var scope = app.Services.CreateScope())
     }
 }
 
+app.UseCustomExceptionHandler();
 app.UseRouting();
 app.UseHttpsRedirection();
 app.UseCors("AllowAll");

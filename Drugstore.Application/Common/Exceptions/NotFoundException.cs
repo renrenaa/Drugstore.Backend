@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Drugstore.Application.Common.Exteptions
+namespace Drugstore.Application.Common.Exceptions
 {
-    public class NotFoundExteption : Exception
+    public class NotFoundExcepcion : Exception
     {
-        public NotFoundExteption(string name, object key)
+        public NotFoundExcepcion(string name, object key)
             : base($"Entity \"{name}\"({key}) not found.") { }
     }
 }
