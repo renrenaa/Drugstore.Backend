@@ -14,6 +14,7 @@ namespace Persistance
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new DrugstoreConfiguration());
+            modelBuilder.Entity<Drug>().Property(p => p.Price).HasColumnType("decimal(7,2)");
             base.OnModelCreating(modelBuilder);
         }
     }
