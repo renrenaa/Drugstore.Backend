@@ -1,6 +1,6 @@
+using Drugstore.Application;
 using Drugstore.Application.Interfaces;
 using Drugstore.Application.Mapping;
-using Drugstore.Application;
 using Persistance;
 using System.Reflection;
 
