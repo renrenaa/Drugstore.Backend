@@ -22,7 +22,6 @@ namespace Drugstore.Application.Drugs.Queries.GetDrugList
             GetDrugListQuery request, CancellationToken cancellationToken)
         {
             var drugsQuery = await _dbContext.Drugs
-                .Where(drug => drug.Id == request.Id)
                 .ProjectTo<DrugLookupDto>(_mapper.ConfigurationProvider)
                 .ToListAsync(cancellationToken);
 
