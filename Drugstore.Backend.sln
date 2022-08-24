@@ -17,7 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8D4F3226
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistance", "Persistance\Persistance.csproj", "{EE296EE0-F18E-4B89-B88F-0D53386531B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drugsrore.WebApi", "Drugsrore.WebApi\Drugsrore.WebApi.csproj", "{53A67A2E-8727-40E5-BC46-756BD2945E22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Drugsrore.WebApi", "Drugsrore.WebApi\Drugsrore.WebApi.csproj", "{53A67A2E-8727-40E5-BC46-756BD2945E22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drugstore.tests", "Drugstore.tests\Drugstore.tests.csproj", "{926E6B4D-8B74-47A3-9E42-3C1C7F685333}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{53A67A2E-8727-40E5-BC46-756BD2945E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53A67A2E-8727-40E5-BC46-756BD2945E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53A67A2E-8727-40E5-BC46-756BD2945E22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{926E6B4D-8B74-47A3-9E42-3C1C7F685333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{926E6B4D-8B74-47A3-9E42-3C1C7F685333}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{926E6B4D-8B74-47A3-9E42-3C1C7F685333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{926E6B4D-8B74-47A3-9E42-3C1C7F685333}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +56,7 @@ Global
 		{3F80FC8A-38DC-4541-81DD-57B5DC37808D} = {611F4037-18DE-44C4-9EF0-F81BA35FFE16}
 		{EE296EE0-F18E-4B89-B88F-0D53386531B3} = {F7CBAE74-1C04-4CBA-A8DC-BB93E47D3984}
 		{53A67A2E-8727-40E5-BC46-756BD2945E22} = {794A08DF-41C6-4683-8FAE-DC06A6411B42}
+		{926E6B4D-8B74-47A3-9E42-3C1C7F685333} = {8D4F3226-15E6-43C5-87A8-C21965434C57}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EF0CE234-2053-467F-9E90-DF4D7C763AD3}
