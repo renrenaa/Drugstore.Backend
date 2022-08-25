@@ -1,6 +1,6 @@
 ﻿using Persistance;
 
-namespace Drugstore.tests.Common
+namespace Drugstore.Tests.Common
 {
     public abstract class TestCommandBase : IDisposable
     {

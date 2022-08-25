@@ -1,9 +1,9 @@
-﻿using Drugstore.tests.Common;
+﻿using Drugstore.Tests.Common;
 using Drugstore.Application.Drugs.Commands.UpdateDrug;
 using Microsoft.EntityFrameworkCore;
 using Drugstore.Application.Common.Exceptions;
 
-namespace Drugstore.tests.Drugs.Commands
+namespace Drugstore.Tests.Drugs.Commands
 {
     public class UpdateDrugCommandHandlerTests
         : TestCommandBase

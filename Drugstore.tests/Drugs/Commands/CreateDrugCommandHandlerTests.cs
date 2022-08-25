@@ -1,8 +1,8 @@
-﻿using Drugstore.tests.Common;
+﻿using Drugstore.Tests.Common;
 using Drugstore.Application.Drugs.Commands.CreateDrug;
 using Microsoft.EntityFrameworkCore;
 
-namespace Drugstore.tests.Drugs.Commands
+namespace Drugstore.Tests.Drugs.Commands
 {
     public class CreateDrugCommandHandlerTests
         :TestCommandBase

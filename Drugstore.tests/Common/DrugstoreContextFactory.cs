@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Persistance;
 
-namespace Drugstore.tests.Common
+namespace Drugstore.Tests.Common
 {
     public static class DrugstoreContextFactory
     {

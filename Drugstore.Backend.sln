@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistance", "Persistance\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Drugsrore.WebApi", "Drugsrore.WebApi\Drugsrore.WebApi.csproj", "{53A67A2E-8727-40E5-BC46-756BD2945E22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drugstore.tests", "Drugstore.tests\Drugstore.tests.csproj", "{926E6B4D-8B74-47A3-9E42-3C1C7F685333}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Drugstore.Tests", "Drugstore.tests\Drugstore.Tests.csproj", "{926E6B4D-8B74-47A3-9E42-3C1C7F685333}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

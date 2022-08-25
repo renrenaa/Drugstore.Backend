@@ -1,9 +1,9 @@
-﻿using Drugstore.tests.Common;
+﻿using Drugstore.Tests.Common;
 using Drugstore.Application.Drugs.Commands.DeleteDrug;
 using Microsoft.EntityFrameworkCore;
 using Drugstore.Application.Common.Exceptions;
 
-namespace Drugstore.tests.Drugs.Commands
+namespace Drugstore.Tests.Drugs.Commands
 {
     public class DeleteNoteCommandHandlerTests
         :TestCommandBase
@@ -19,7 +19,7 @@ namespace Drugstore.tests.Drugs.Commands
             },
             CancellationToken.None);
 
-            Assert.Null(Context.Drugs.SingleOrDefaultAsync(drug =>
+            Assert.Null(await Context.Drugs.SingleOrDefaultAsync(drug =>
                 drug.Id == DrugstoreContextFactory.DrugIdForDelete));
         }
 
