@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Drugstore.Application.Drugs.Commands.CreateDrug;
 using Drugstore.Application.Mapping;
+using System.ComponentModel.DataAnnotations;
 
 namespace Drugsrore.WebApi.Models
 {
@@ -8,6 +9,7 @@ namespace Drugsrore.WebApi.Models
     {
         public Guid Id { get; set; }
         public decimal Price { get; set; }
+        [Required]
         public string Tittle { get; set; }
         public int Quantity { get; set; }
         public string Description { get; set; }

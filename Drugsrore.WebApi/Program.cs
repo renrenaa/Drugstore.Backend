@@ -26,6 +26,13 @@ services.AddCors(options =>
         policy.AllowAnyOrigin();
     }));
 
+services.AddSwaggerGen(config =>
+{
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    config.IncludeXmlComments(xmlPath);
+});
+
 var app = builder.Build();
 
 using(var scope = app.Services.CreateScope())
@@ -44,6 +51,12 @@ using(var scope = app.Services.CreateScope())
     }
 }
 
+app.UseSwagger();
+app.UseSwaggerUI(config =>
+{
+    config.RoutePrefix = String.Empty;
+    config.SwaggerEndpoint("swagger/v1/swagger.json", "DrugstoreWebApi");
+});
 app.UseCustomExceptionHandler();
 app.UseRouting();
 app.UseHttpsRedirection();
