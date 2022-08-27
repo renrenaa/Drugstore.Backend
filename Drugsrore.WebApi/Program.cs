@@ -1,8 +1,11 @@
 using Drugsrore.WebApi.Middleware;
+using Drugsrore.WebApi.Servises;
 using Drugstore.Application;
 using Drugstore.Application.Interfaces;
 using Drugstore.Application.Mapping;
 using Persistance;
+using Serilog;
+using Serilog.Events;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -33,7 +36,17 @@ services.AddSwaggerGen(config =>
     config.IncludeXmlComments(xmlPath);
 });
 
+services.AddSingleton<ICurrentUserService, CurrentUserService>();
+services.AddHttpContextAccessor();
+
+builder.Host.UseSerilog();
 var app = builder.Build();
+
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+    .WriteTo.File("DrugsWebAppLog-.txt", rollingInterval: 
+        RollingInterval.Day)
+    .CreateLogger();
 
 using(var scope = app.Services.CreateScope())
 {
@@ -45,9 +58,9 @@ using(var scope = app.Services.CreateScope())
             serviceProvider.GetRequiredService<DrugstoreDbContext>();
         DbInitializer.Initialize(context);
     }
-    catch
+    catch(Exception exception)
     {
-        throw;
+        Log.Fatal(exception, "An error occurred while app initilization");
     }
 }
 

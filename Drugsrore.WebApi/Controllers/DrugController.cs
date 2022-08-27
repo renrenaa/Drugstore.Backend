@@ -13,7 +13,7 @@ namespace Drugsrore.WebApi.Controllers
     [Route("api/[controller]")]
     public class DrugController : BaseController
     {
-        private IMapper _mapper;
+        private readonly IMapper _mapper;
 
         public DrugController(IMapper mapper)
         {
