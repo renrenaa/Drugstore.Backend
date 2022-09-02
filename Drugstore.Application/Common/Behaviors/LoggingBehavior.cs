@@ -22,7 +22,8 @@ namespace Drugstore.Application.Common.Behaviors
             var userId = _currentUserService.UserId;
             var requestName = typeof(TRequest).Name;
 
-            Log.Information($"Drugs request: {requestName} {@userId} {@request}");
+            Log.Information("Drugs request: {Name} {@UserId} {@Request}", 
+                requestName, userId, request);
 
             var response = await next();
 

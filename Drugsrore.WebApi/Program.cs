@@ -39,13 +39,15 @@ services.AddSwaggerGen(config =>
 services.AddSingleton<ICurrentUserService, CurrentUserService>();
 services.AddHttpContextAccessor();
 
-builder.Host.UseSerilog();
+builder.Host.UseSerilog(); 
 var app = builder.Build();
 
+Console.OutputEncoding = System.Text.Encoding.UTF8;
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
     .WriteTo.File("DrugsWebAppLog-.txt", rollingInterval: 
         RollingInterval.Day)
+    .WriteTo.Console()
     .CreateLogger();
 
 using(var scope = app.Services.CreateScope())
